@@ -11,20 +11,18 @@
     <!-- Define your beans here -->
     
     <!-- define the dependency -->
-    <bean id="myFortune"
+    <bean id="myFortuneService"
     		class="springdemo.HappyFortuneService">
     	</bean>
     
  	<bean id="myCoach"
  		class="springdemo.TrackCoach">	 	
- 		<constructor-arg ref="myFortune" />
+ 		<constructor-arg ref="myFortuneService" />
  	</bean>
 
-    <!--
-    <bean id="myCoach"
-        class="springdemo.BaseballCoach">         
-    </bean>
-    -->
+	<bean id="myCricketCoach" class="springdemo.CricketCoach">
+	<property name="fortuneService" ref="myFortuneService"></property>
+	</bean>
 
 </beans>
 

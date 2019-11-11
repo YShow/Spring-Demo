@@ -21,7 +21,13 @@
  	</bean>
 
 	<bean id="myCricketCoach" class="springdemo.CricketCoach">
-	<property name="fortuneService" ref="myFortuneService"></property>
+	
+	<property name="fortuneService" ref="myFortuneService" />
+	
+	<property name="emailAddress" value="emailAleatorio@aleatorio.com.br"/>
+
+	<property name="team" value="Sunriser"/>
+	
 	</bean>
 
 </beans>

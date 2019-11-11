@@ -28,7 +28,7 @@ public class CricketCoach implements Coach {
 	
 	
 	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("Dentro do setter fortune");
+		System.out.println("Dentro do setter fortune");		
 		this.fortuneService = fortuneService;
 	}
 
@@ -38,13 +38,11 @@ public class CricketCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
-	
 		return "Pratice Fast bowling for 15 minutes a day";
 	}
 
 	@Override
-	public String getDailyFortune() {
-		
+	public String getDailyFortune() {		
 		return fortuneService.getFortune();
 	}
 

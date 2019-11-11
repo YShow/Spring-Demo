@@ -24,12 +24,13 @@
 	
 	<property name="fortuneService" ref="myFortuneService" />
 	
-	<property name="emailAddress" value="emailAleatorio@aleatorio.com.br"/>
+	<property name="emailAddress" value="${prop.email}"/>
 
-	<property name="team" value="Sunriser"/>
+	<property name="team" value="${prop.team}"/>
 	
 	</bean>
-
+	
+	<context:property-placeholder location="classpath:sport.properties"/>
 </beans>
 
 

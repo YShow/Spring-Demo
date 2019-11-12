@@ -2,13 +2,13 @@ package springdemo;
 
 public class MyApp {
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 
 		// create the object
-		Coach theCoach = new TrackCoach();
-		
+		final Coach theCoach = new TrackCoach();
+
 		// use the object
-		System.out.println(theCoach.getDailyWorkout());		
+		System.out.println(theCoach.getDailyWorkout());
 	}
 
 }

@@ -2,13 +2,13 @@ package springdemo;
 
 public class TrackCoach implements Coach {
 
-	
 	private FortuneService fortuneService;
-	
+
 	public TrackCoach() {
-		
+
 	}
-	public TrackCoach(FortuneService fortuneService) {
+
+	public TrackCoach(final FortuneService fortuneService) {
 		super();
 		this.fortuneService = fortuneService;
 	}
@@ -20,26 +20,16 @@ public class TrackCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-	
+
 		return "Hoje é " + fortuneService.getFortune();
 	}
-	
+
 	public void fazMeuStart() {
-			System.out.println("Dentro do start de track coach");
+		System.out.println("Dentro do start de track coach");
 	}
 
 	public void limpaStart() {
 		System.out.println("Dentro do limpa start de track coach");
 	}
-	
+
 }
-
-
-
-
-
-
-
-
-
-

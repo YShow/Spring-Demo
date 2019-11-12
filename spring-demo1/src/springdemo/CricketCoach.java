@@ -2,13 +2,13 @@ package springdemo;
 
 public class CricketCoach implements Coach {
 
-
 	private String emailAddress;
+
 	public String getEmailAddress() {
 		return emailAddress;
 	}
 
-	public void setEmailAddress(String emailAddress) {
+	public void setEmailAddress(final String emailAddress) {
 		System.out.println("Dentro do setter e-mail");
 		this.emailAddress = emailAddress;
 	}
@@ -17,18 +17,16 @@ public class CricketCoach implements Coach {
 		return team;
 	}
 
-	public void setTeam(String team) {
+	public void setTeam(final String team) {
 		System.out.println("Dentro do setter team");
 		this.team = team;
 	}
 
 	private String team;
 	private FortuneService fortuneService;
-	
-	
-	
-	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("Dentro do setter fortune");		
+
+	public void setFortuneService(final FortuneService fortuneService) {
+		System.out.println("Dentro do setter fortune");
 		this.fortuneService = fortuneService;
 	}
 
@@ -42,7 +40,7 @@ public class CricketCoach implements Coach {
 	}
 
 	@Override
-	public String getDailyFortune() {		
+	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
 

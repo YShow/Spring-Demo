@@ -1,6 +1,7 @@
 package demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -23,8 +24,8 @@ public class TennisCoach implements Coach {
 	}
 	*/
 	//Exemplo de Constructor injection
-	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
+	@Autowired	
+	public TennisCoach(@Qualifier("happyFortuneService") FortuneService fortuneService) {
 		super();
 		this.fortuneService = fortuneService;
 	}

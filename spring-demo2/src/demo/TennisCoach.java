@@ -25,7 +25,7 @@ public class TennisCoach implements Coach {
 	*/
 	//Exemplo de Constructor injection
 	@Autowired	
-	public TennisCoach(@Qualifier("happyFortuneService") FortuneService fortuneService) {
+	public TennisCoach(@Qualifier("randomFortuneService") FortuneService fortuneService) {
 		super();
 		this.fortuneService = fortuneService;
 	}

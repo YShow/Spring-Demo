@@ -23,7 +23,15 @@ public class TrackCoach implements Coach {
 	
 		return "Hoje é " + fortuneService.getFortune();
 	}
+	
+	public void fazMeuStart() {
+			System.out.println("Dentro do start de track coach");
+	}
 
+	public void limpaStart() {
+		System.out.println("Dentro do limpa start de track coach");
+	}
+	
 }
 
 

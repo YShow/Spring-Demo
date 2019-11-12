@@ -8,9 +8,11 @@ public class AnnotationDemoApp {
 		final var context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 		try (context) {
-			final var theCoach = context.getBean("thatTennisCoach", Coach.class);
+			final var theCoach = context.getBean("tennisCoach", Coach.class);
 
 			System.out.println(theCoach.getDailyWorkout());
+			
+			System.out.println(theCoach.getDailyFortune());
 		}
 	}
 

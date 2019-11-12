@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 
+	//Exemplo de field injection
+	//@Autowired
 	private FortuneService fortuneService;
 	
 	
@@ -13,19 +15,20 @@ public class TennisCoach implements Coach {
 		super();
 		System.out.println(">> dentro do construtor default de tennisCoach");
 	}
-
-	@Autowired
-	public void fazAlgoComIsso(FortuneService fortuneService) {
+	//exemplo de setter injection
+	/*@Autowired
+	public void setFortuneService(FortuneService fortuneService) {
 		System.out.println(">> TennisCoach: dentro do  setFortuneService() metodo");
 		this.fortuneService = fortuneService;
 	}
-/*
+	*/
+	//Exemplo de Constructor injection
 	@Autowired
 	public TennisCoach(FortuneService fortuneService) {
 		super();
 		this.fortuneService = fortuneService;
 	}
-*/
+
 	@Override
 	public String getDailyWorkout() {
 		return "Pratice you backhand volley";

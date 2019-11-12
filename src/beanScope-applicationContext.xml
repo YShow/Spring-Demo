@@ -19,18 +19,6 @@
  		class="springdemo.TrackCoach" scope="prototype">	 	
  		<constructor-arg ref="myFortuneService"/>
  	</bean>
-
-	<bean id="myCricketCoach" class="springdemo.CricketCoach">
-	
-	<property name="fortuneService" ref="myFortuneService" />
-	
-	<property name="emailAddress" value="${prop.email}"/>
-
-	<property name="team" value="${prop.team}"/>
-	
-	</bean>
-	
-	<context:property-placeholder location="classpath:sport.properties"/>
 </beans>
 
 

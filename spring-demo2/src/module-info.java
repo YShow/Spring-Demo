@@ -1,5 +1,5 @@
 module spring {
-	exports demo to spring.beans;
+	exports demo to spring.beans,spring.context;
 
 	opens demo to spring.core;
 

@@ -7,15 +7,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RandomFortuneService implements FortuneService {
-	
-	
-	private List<String> data = List.of("sorte","recompensa","azar");
-	
-	private Random myRandom = new Random();
+
+	private final List<String> data = List.of("sorte", "recompensa", "azar");
+
+	private final Random myRandom = new Random();
+
 	@Override
 	public String getFortune() {
-		int index = myRandom.nextInt(data.size());
-	
+		final int index = myRandom.nextInt(data.size());
+
 		return data.get(index);
 	}
 

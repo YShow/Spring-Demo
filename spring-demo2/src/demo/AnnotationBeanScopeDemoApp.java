@@ -18,6 +18,7 @@ public class AnnotationBeanScopeDemoApp {
 			System.out.println("\n Localização na memoria para theCoach " + theCoach);
 
 			System.out.println("\n Localização na memoria para alphaCoach " + alphaCoach);
+			
 		}
 
 	}

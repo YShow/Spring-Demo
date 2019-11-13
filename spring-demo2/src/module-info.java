@@ -6,4 +6,5 @@ module spring {
 	requires spring.beans;
 	requires spring.context;
 	requires spring.core;
+	requires java.annotation;
 }
